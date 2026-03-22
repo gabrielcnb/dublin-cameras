@@ -42,3 +42,4 @@ next-env.d.ts
 
 # scripts with camera discovery data (not for public repo)
 /scripts
+nul
