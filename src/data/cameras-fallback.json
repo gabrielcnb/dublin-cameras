@@ -1,0 +1,139 @@
+[
+  {
+    "id": "hls-oconnell-gpo",
+    "name": "O'Connell Street - GPO",
+    "road": "Centro",
+    "direction": "GPO Building View",
+    "latitude": 53.3498,
+    "longitude": -6.2603,
+    "type": "hls",
+    "hlsUrl": "https://media.evercam.io/streaming/hls/gpocam/index.m3u8",
+    "pageUrl": "https://carrollsirishgifts.com/pages/dublinwebcam",
+    "source": "Carrolls Irish Gifts",
+    "status": "online"
+  },
+  {
+    "id": "yt-earthcam-temple-bar",
+    "name": "Temple Bar",
+    "road": "Centro",
+    "direction": "Street View",
+    "latitude": 53.3454,
+    "longitude": -6.2647,
+    "type": "youtube",
+    "youtubeId": "u4UZ4UvZXrg",
+    "source": "EarthCam",
+    "status": "online"
+  },
+  {
+    "id": "yt-dublin-port",
+    "name": "Dublin Bay - Porto",
+    "road": "Porto",
+    "direction": "Bay View",
+    "latitude": 53.3400,
+    "longitude": -6.1775,
+    "type": "youtube",
+    "youtubeId": "oxx7MqjhOpw",
+    "source": "Dublin Port",
+    "status": "online"
+  },
+  {
+    "id": "yt-dublin-port-liffey",
+    "name": "Dublin Port - Rio Liffey",
+    "road": "Porto",
+    "direction": "River View",
+    "latitude": 53.3538,
+    "longitude": -6.2141,
+    "type": "youtube",
+    "youtubeId": "K_ye7QHXosQ",
+    "source": "Dublin Port",
+    "status": "online"
+  },
+  {
+    "id": "yt-cabra-nw",
+    "name": "Cabra Road - West",
+    "road": "Cabra Road",
+    "direction": "Facing Navan Road",
+    "latitude": 53.3612,
+    "longitude": -6.2875,
+    "type": "youtube",
+    "youtubeId": "0EaadySjNXE",
+    "status": "online"
+  },
+  {
+    "id": "yt-cabra-east",
+    "name": "Cabra Road - East",
+    "road": "Cabra Road",
+    "direction": "Facing Phibsborough",
+    "latitude": 53.3612,
+    "longitude": -6.2875,
+    "type": "youtube",
+    "youtubeId": "IvJS6CT1cxg",
+    "status": "online"
+  },
+  {
+    "id": "yt-rathmines",
+    "name": "Rathmines",
+    "road": "Rathmines",
+    "direction": "City Skyline View",
+    "latitude": 53.3258,
+    "longitude": -6.2549,
+    "type": "youtube",
+    "youtubeId": "UnpQ2LLEcX8",
+    "status": "online"
+  },
+  {
+    "id": "yt-paddocks",
+    "name": "Paddocks Riding Centre",
+    "road": "Dublin West",
+    "direction": "Riding Centre",
+    "latitude": 53.3750,
+    "longitude": -6.3200,
+    "type": "youtube",
+    "youtubeId": "bjIIb_lMCfI",
+    "status": "online"
+  },
+  {
+    "id": "yt-collins-ave",
+    "name": "Collins Avenue",
+    "road": "Whitehall",
+    "direction": "Street View",
+    "latitude": 53.3773,
+    "longitude": -6.2257,
+    "type": "youtube",
+    "youtubeId": "g1r59JJqY60",
+    "status": "online"
+  },
+  {
+    "id": "yt-mountjoy",
+    "name": "Mountjoy Street",
+    "road": "Phibsborough",
+    "direction": "Street View",
+    "latitude": 53.3564,
+    "longitude": -6.2664,
+    "type": "youtube",
+    "youtubeId": "koBVuw3illw",
+    "status": "online"
+  },
+  {
+    "id": "yt-glasnevin-pub",
+    "name": "Brian Boru Pub",
+    "road": "Glasnevin",
+    "direction": "Prospect Road",
+    "latitude": 53.3652,
+    "longitude": -6.2720,
+    "type": "youtube",
+    "youtubeId": "hG9WevRhP_s",
+    "status": "online"
+  },
+  {
+    "id": "yt-ncr",
+    "name": "North Circular Road",
+    "road": "Phibsborough",
+    "direction": "Facing North West",
+    "latitude": 53.3603,
+    "longitude": -6.2768,
+    "type": "youtube",
+    "youtubeId": "KpZ8vteYNOw",
+    "status": "online"
+  }
+]

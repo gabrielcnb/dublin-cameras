@@ -1,31 +1,37 @@
 # Dublin Cameras
 
-Interactive map of Dublin's live traffic cameras. Click any camera marker to watch the live HLS stream directly in the browser.
+Interactive map of Dublin's live traffic cameras. Click any camera to watch the live feed directly in the browser.
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript)
-![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8?logo=tailwindcss)
+![Tailwind](https://img.shields.io/badge/Tailwind-4-38bdf8?logo=tailwindcss)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Features
 
 - **Live map** with camera markers across Dublin (Leaflet + React Leaflet)
-- **HLS video streams** played directly in the browser (hls.js)
-- **Real-time data** fetched from Dublin's traffic camera API (React Query)
-- **Fast state management** with Zustand
-- **Responsive UI** built with Tailwind CSS
+- **Multiple feed types** — HLS streams, YouTube embeds, image snapshots, iframe links
+- **Auto-refresh** snapshots every 10 seconds
+- **Search and filter** cameras by name or road
+- **Favorites** saved locally (Zustand + localStorage)
+- **Dark mode** with toggle, persisted across sessions
+- **Shareable URLs** — `?cam=ID` opens a specific camera
+- **Online/offline status** checking for each camera
+- **Collapsible sidebar** with camera list and count
+- **Data source** — Transport Infrastructure Ireland (TII) GraphQL API with local fallback
 
 ## Stack
 
 | Component | Library |
 |-----------|---------|
-| Framework | Next.js 14 |
+| Framework | Next.js 16 (App Router) |
 | Language | TypeScript |
 | Map | Leaflet + React Leaflet |
 | Video | hls.js |
-| Data fetching | @tanstack/react-query |
-| State | Zustand |
-| Styling | Tailwind CSS |
+| Data fetching | TanStack React Query |
+| State | Zustand (with persist) |
+| Styling | Tailwind CSS 4 |
+| Icons | Lucide React |
 
 ## Getting Started
 
