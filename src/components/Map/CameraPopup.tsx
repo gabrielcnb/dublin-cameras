@@ -12,7 +12,7 @@ interface CameraPopupProps {
 
 export function CameraPopup({ camera }: CameraPopupProps) {
   const { toggleFavorite, isFavorite, setSelectedCamera } = useCameraStore();
-  const [imageKey, setImageKey] = useState(Date.now());
+  const [imageKey, setImageKey] = useState(0);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   const favorite = isFavorite(camera.id);

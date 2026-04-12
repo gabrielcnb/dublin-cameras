@@ -11,6 +11,14 @@ export async function GET(request: NextRequest) {
     );
   }
 
+  // Validate videoId format (YouTube IDs are 11 chars, alphanumeric + - + _)
+  if (!/^[a-zA-Z0-9_-]{11}$/.test(videoId)) {
+    return NextResponse.json(
+      { error: 'Invalid videoId format' },
+      { status: 400 }
+    );
+  }
+
   try {
     const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
 

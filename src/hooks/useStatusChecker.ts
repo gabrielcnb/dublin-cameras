@@ -23,17 +23,20 @@ export function useStatusChecker(cameras: Camera[]) {
     };
 
     const checkAllCameras = async () => {
-      const offline: string[] = [];
+      const youtubeCameras = cameras.filter(c => c.type === 'youtube');
 
-      for (const camera of cameras) {
-        if (camera.type === 'youtube') {
+      const results = await Promise.allSettled(
+        youtubeCameras.map(async (camera) => {
           const isLive = await checkYouTubeStatus(camera);
-          if (!isLive) {
-            offline.push(camera.id);
-          }
-        }
-        // iframe cameras assumed online
-      }
+          return { id: camera.id, isLive };
+        })
+      );
+
+      const offline: string[] = results
+        .filter((r): r is PromiseFulfilledResult<{ id: string; isLive: boolean }> =>
+          r.status === 'fulfilled' && !r.value.isLive
+        )
+        .map(r => r.value.id);
 
       setOfflineCameras(offline);
     };
