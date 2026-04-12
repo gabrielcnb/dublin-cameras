@@ -22,6 +22,10 @@ export function SearchFilter({ roads, cameras }: SearchFilterProps) {
       return;
     }
     if (!navigator.geolocation) return;
+    const consent = window.confirm(
+      'Para filtrar câmeras próximas, precisamos acessar sua localização. Seus dados de localização NÃO são armazenados em nosso servidor. Deseja continuar?'
+    );
+    if (!consent) return;
     setLocating(true);
     navigator.geolocation.getCurrentPosition(
       (pos) => {
