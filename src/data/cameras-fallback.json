@@ -135,5 +135,42 @@
     "type": "youtube",
     "youtubeId": "KpZ8vteYNOw",
     "status": "online"
+  },
+  {
+    "id": "yt-earthcam-live",
+    "name": "EarthCam - Temple Bar Live",
+    "road": "Centro",
+    "direction": "Temple Bar Street View",
+    "latitude": 53.3454,
+    "longitude": -6.2645,
+    "type": "youtube",
+    "youtubeId": "3nyPER2kzqk",
+    "source": "EarthCam",
+    "status": "online"
+  },
+  {
+    "id": "yt-poolbeg-lighthouse",
+    "name": "Poolbeg Lighthouse",
+    "road": "Porto",
+    "direction": "River Liffey & Ship Movements",
+    "latitude": 53.3393,
+    "longitude": -6.1509,
+    "type": "youtube",
+    "youtubeId": "jy3fkOBIolk",
+    "source": "Dublin Port",
+    "status": "online"
+  },
+  {
+    "id": "img-skyline-liffey",
+    "name": "Dublin Skyline - Rio Liffey",
+    "road": "Centro",
+    "direction": "Four Courts & River Liffey Panorama",
+    "latitude": 53.3448,
+    "longitude": -6.2680,
+    "type": "image",
+    "imageUrl": "https://cdn.skylinewebcams.com/1901.jpg",
+    "pageUrl": "https://www.skylinewebcams.com/en/webcam/ireland/leinster/dublin/dublin-skyline.html",
+    "source": "SkylineWebcams",
+    "status": "online"
   }
 ]
