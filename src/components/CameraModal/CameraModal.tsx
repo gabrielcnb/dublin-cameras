@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { X, ExternalLink, RefreshCw, Video, Image, Globe, Radio, Share2, WifiOff } from 'lucide-react';
-import type { Camera } from '@/lib/types';
 import { useCameraStore } from '@/stores/cameraStore';
 import { cn } from '@/lib/utils';
 import Hls from 'hls.js';

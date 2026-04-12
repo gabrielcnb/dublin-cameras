@@ -26,6 +26,9 @@ const CAMERAS_QUERY = `
 
 async function fetchFromTII(): Promise<Camera[]> {
   try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+
     const response = await fetch('https://traffic.tii.ie/api/graphql', {
       method: 'POST',
       headers: {
@@ -36,8 +39,11 @@ async function fetchFromTII(): Promise<Camera[]> {
         query: CAMERAS_QUERY,
         variables: { page: 1, pageSize: 300 },
       }),
+      signal: controller.signal,
       next: { revalidate: 60 },
     });
+
+    clearTimeout(timeout);
 
     if (!response.ok) {
       throw new Error(`TII API error: ${response.status}`);
