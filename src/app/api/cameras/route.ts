@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { Camera } from '@/lib/types';
+import { checkRateLimit, getClientIP } from '@/lib/rate-limit';
 import fallbackCameras from '@/data/cameras-fallback.json';
 
 // GraphQL query to fetch cameras from TII
@@ -89,7 +90,24 @@ function extractRoadFromName(name: string): string {
   return match ? match[1].toUpperCase() : 'Other';
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  // Rate limiting: 30 requests per minute per IP
+  const ip = getClientIP(request);
+  const { allowed, remaining } = checkRateLimit(`cameras:${ip}`, 30, 60_000);
+
+  if (!allowed) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      {
+        status: 429,
+        headers: {
+          'Retry-After': '60',
+          'X-RateLimit-Remaining': '0',
+        },
+      }
+    );
+  }
+
   // Try to fetch from TII API first
   let cameras = await fetchFromTII();
 
@@ -102,6 +120,7 @@ export async function GET() {
   return NextResponse.json(cameras, {
     headers: {
       'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=30',
+      'X-RateLimit-Remaining': String(remaining),
     },
   });
 }
