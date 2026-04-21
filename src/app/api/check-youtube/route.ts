@@ -1,6 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { checkRateLimit, getClientIP } from '@/lib/rate-limit';
 
 export async function GET(request: NextRequest) {
+  // Rate limiting: 30 requests per minute per IP
+  const ip = getClientIP(request);
+  const { allowed, remaining } = checkRateLimit(`check-youtube:${ip}`, 30, 60_000);
+
+  if (!allowed) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      {
+        status: 429,
+        headers: {
+          'Retry-After': '60',
+          'X-RateLimit-Remaining': '0',
+        },
+      }
+    );
+  }
+
   const searchParams = request.nextUrl.searchParams;
   const videoId = searchParams.get('videoId');
 
