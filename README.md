@@ -12,15 +12,15 @@ Live at [dublin-cameras.vercel.app](https://dublin-cameras.vercel.app)
 ## Features
 
 - **Live map** with camera markers across Dublin (Leaflet + React Leaflet)
-- **Multiple feed types** — HLS streams, YouTube embeds, image snapshots, iframe links
+- **Multiple feed types**: HLS streams, YouTube embeds, image snapshots, iframe links
 - **Auto-refresh** snapshots every 10 seconds
 - **Search and filter** cameras by name or road
 - **Favorites** saved locally (Zustand + localStorage)
 - **Dark mode** with toggle, persisted across sessions
-- **Shareable URLs** — `?cam=ID` opens a specific camera
+- **Shareable URLs**: `?cam=ID` opens a specific camera
 - **Online/offline status** checking for each camera
 - **Collapsible sidebar** with camera list and count
-- **Data source** — Transport Infrastructure Ireland (TII) GraphQL API with local fallback
+- **Data source**: Transport Infrastructure Ireland (TII) GraphQL API with local fallback
 
 ## Stack
 
