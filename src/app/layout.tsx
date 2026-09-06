@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Dublin Traffic Cameras - Mapa Interativo',
+  title: 'Dublin Traffic Cameras - Interactive Map',
   description:
-    'Visualize cameras de trafego publicas de Dublin em tempo real em um mapa interativo.',
+    'Watch public traffic cameras across Dublin live on an interactive map.',
   keywords: ['Dublin', 'traffic', 'cameras', 'Ireland', 'TII', 'map'],
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <Providers>{children}</Providers>
         <footer style={{ textAlign: 'center', padding: '1rem', fontSize: '0.75rem', color: '#888' }}>
