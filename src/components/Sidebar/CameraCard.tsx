@@ -49,7 +49,7 @@ export function CameraCard({ camera }: CameraCardProps) {
             toggleFavorite(camera.id);
           }}
           className="p-1.5 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors"
-          title={favorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+          title={favorite ? 'Remove from favourites' : 'Add to favourites'}
         >
           <Heart
             className={cn(

@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         <Providers>{children}</Providers>
         <footer style={{ textAlign: 'center', padding: '1rem', fontSize: '0.75rem', color: '#888' }}>
-          Este site não coleta dados pessoais. Preferências são salvas localmente no seu navegador.
+          This site collects no personal data. Preferences are stored locally in your browser.
         </footer>
       </body>
     </html>

@@ -231,7 +231,7 @@ export function CameraModal() {
           return (
             <div className="flex flex-col items-center justify-center h-full bg-gray-900 text-white gap-4">
               <WifiOff className="w-12 h-12 text-gray-500" />
-              <p className="text-gray-400">Stream offline ou indisponível</p>
+              <p className="text-gray-400">Stream offline or unavailable</p>
               <button
                 onClick={handleRetryHls}
                 className="flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors text-sm"
@@ -343,7 +343,7 @@ export function CameraModal() {
                   ? 'text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20'
                   : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
               )}
-              title={copied ? 'Link copiado!' : 'Copiar link desta câmera'}
+              title={copied ? 'Link copied!' : 'Copy link to this camera'}
             >
               <Share2 className="w-5 h-5" />
             </button>

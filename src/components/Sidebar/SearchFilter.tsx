@@ -23,7 +23,7 @@ export function SearchFilter({ roads, cameras }: SearchFilterProps) {
     }
     if (!navigator.geolocation) return;
     const consent = window.confirm(
-      'Para filtrar câmeras próximas, precisamos acessar sua localização. Seus dados de localização NÃO são armazenados em nosso servidor. Deseja continuar?'
+      'To filter nearby cameras we need access to your location. Your location data is NOT stored on our server. Continue?'
     );
     if (!consent) return;
     setLocating(true);
@@ -34,7 +34,7 @@ export function SearchFilter({ roads, cameras }: SearchFilterProps) {
       },
       () => {
         setLocating(false);
-        alert('Não foi possível obter sua localização. Verifique as permissões do navegador.');
+        alert('Could not get your location. Check your browser permissions.');
       },
       { enableHighAccuracy: true, timeout: 10000 }
     );
@@ -141,10 +141,10 @@ export function SearchFilter({ roads, cameras }: SearchFilterProps) {
               ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
               : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
           )}
-          title={userLocation ? 'Clique para desativar filtro de proximidade' : 'Mostrar câmeras num raio de 5 km'}
+          title={userLocation ? 'Click to turn off the proximity filter' : 'Show cameras within 5 km'}
         >
           <MapPin className={cn('w-4 h-4', locating && 'animate-pulse')} />
-          {locating ? 'Localizando...' : userLocation ? 'Perto de mim ✕' : 'Perto de mim'}
+          {locating ? 'Locating...' : userLocation ? 'Near me ✕' : 'Near me'}
         </button>
 
         {hasActiveFilters && (
