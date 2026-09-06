@@ -5,7 +5,7 @@ Interactive map of Dublin's live traffic cameras. Click any camera to watch the 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript)
 ![Tailwind](https://img.shields.io/badge/Tailwind-4-38bdf8?logo=tailwindcss)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 Live at [dublin-cameras.vercel.app](https://dublin-cameras.vercel.app)
 
